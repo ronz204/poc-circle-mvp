@@ -13,6 +13,7 @@ Within Circle, the "Goal Racing" is any individual or group actively committed t
 
 In essence, Circle is the race track, and its users, the “Goal Racers”, are the ones who run that track with the help and encouragement of their community.
 
+****
 
 #### Problem
 
