@@ -28,7 +28,8 @@
     // Imports paths
     "baseUrl": ".",
     "paths": {
-      "@Routers/*": ["src/Presentation/Routers/*"]
+      "@Configs/*": ["src/Infrastructure/Configs/*"],
+      "@Routers/*": ["src/Presentation/Routers/*"],
     },
   },
 }

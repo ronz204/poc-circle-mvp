@@ -1,13 +1,12 @@
 import expres from "express";
 import { Bootstrap } from "./Bootstrap";
-import { Environment } from "./Environment";
+import { ApiConfig } from "@Configs/ApiConfig";
 
-const app = expres();
-
+export const app = expres();
 const bootstrap = new Bootstrap(app);
 
 bootstrap.addRouting();
 
-app.listen(Environment.EXPRESS_PORT, () => {
-  console.log(`Server is listening at http://localhost:${Environment.EXPRESS_PORT}`);
+app.listen(ApiConfig.PORT, () => {
+  console.log(`Server is listening at http://localhost:${ApiConfig.PORT}`);
 });

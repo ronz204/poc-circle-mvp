@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "start:prod": "bun run ./src/Server.ts",
-    "start:dev": "bun --hot run ./src/Server.ts"
+    "start:dev": "bun --hot run ./src/Server.ts",
+    "test:e2e": "playwright test"
   },
   "devDependencies": {
     "@types/bun": "latest",
@@ -15,6 +16,7 @@
     "typescript": "^5"
   },
   "dependencies": {
+    "@playwright/test": "^1.53.2",
     "express": "^5.1.0"
   }
 }
