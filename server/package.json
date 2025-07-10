@@ -4,6 +4,11 @@
   "type": "module",
   "private": true,
   "scripts": {
+    "prisma:seed": "prisma db seed",
+    "prisma:studio": "prisma studio",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrade dev",
+
     "start:prod": "bun run ./src/Server.ts",
     "start:dev": "bun --hot run ./src/Server.ts"
   },
@@ -15,6 +20,8 @@
     "typescript": "^5"
   },
   "dependencies": {
-    "express": "^5.1.0"
+    "@prisma/client": "^6.11.1",
+    "express": "^5.1.0",
+    "prisma": "^6.11.1"
   }
 }
