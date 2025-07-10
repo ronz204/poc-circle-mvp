@@ -34,8 +34,24 @@
 
 ****
 
-**FE-05:** Profile Creation.
+**FE-05**: User Registration.
 
-**Description:** Users will be able to create an account with a username and password. They will be able to view a basic profile showing the circles they belong to and their goals.
+**Description:** This feature allows new users to create an account by providing a unique username and password. The system will validate credentials and prepare the account for immediate use.
+
+**Details:** The system will handle username availability checks and enforce password complexity rules. User data will be securely stored, typically involving hashing and salting of passwords.
+
+****
+
+**FE-06**: User Authentication.
+
+**Description:** This feature enables registered users to securely log in to their accounts using their established username and password. Successful authentication grants access to personalized application features.
+
+**Details:** This involves credential validation against stored hashes and session management (e.g., JWTs or server-side sessions) to maintain user state upon successful login.
+
+****
+
+**FE-07:** Profile Creation.
+
+**Description:** This feature provides authenticated users with a concise view of their profile, including their username, an optional picture, their circles, and goals. It's designed for quick information retrieval, not extensive customization.
 
 **Details:** The profile will be minimal: username, maybe a profile picture and a list of your active circles. There will be no advanced customization options or detailed statistics for now.
