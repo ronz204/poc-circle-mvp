@@ -1,4 +1,4 @@
-### Circle Vision
+### Circle | Vision
 
 ****
 
