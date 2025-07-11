@@ -28,8 +28,14 @@
     // Imports paths
     "baseUrl": ".",
     "paths": {
+      "@Repositories/*": [
+        "src/Infrastructure/Repositories/*",
+        "src/Enterprise/Repositories/*"
+      ],
+      
       "@Configs/*": ["src/Infrastructure/Configs/*"],
       "@Routers/*": ["src/Presentation/Routers/*"],
+      "@Models/*": ["src/Enterprise/Models/*"],
     },
   },
 }
