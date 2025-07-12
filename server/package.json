@@ -7,7 +7,7 @@
     "prisma:seed": "prisma db seed",
     "prisma:studio": "prisma studio",
     "prisma:generate": "prisma generate",
-    "prisma:migrate": "prisma migrade dev",
+    "prisma:migrate": "prisma migrate dev",
     "start:prod": "bun run ./src/Server.ts",
     "start:dev": "bun --hot run ./src/Server.ts"
   },
