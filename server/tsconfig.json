@@ -32,6 +32,7 @@
     "paths": {
       "@Repositories/*": ["src/Infrastructure/Repositories/*"],
       "@Database/*": ["src/Infrastructure/Database/*"],
+      "@Services/*": ["src/Infrastructure/Services/*"],
       "@Configs/*": ["src/Infrastructure/Configs/*"],
 
       "@UseCases/*": ["src/Application/UseCases/*"],
