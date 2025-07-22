@@ -12,6 +12,8 @@
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
     "noEmit": true,
 
     // Best practices
@@ -28,8 +30,17 @@
     // Imports paths
     "baseUrl": ".",
     "paths": {
-      "@Configs/*": ["src/Infrastructure/Configs/*"],
+      "@Controllers/*": ["src/Presentation/Controllers/*"],
+      "@Middlewares/*": ["src/Presentation/Middlewares/*"],
       "@Routers/*": ["src/Presentation/Routers/*"],
+
+      "@Database/*": ["src/Infrastructure/Database/*"],
+      "@Services/*": ["src/Infrastructure/Services/*"],
+      "@Configs/*": ["src/Infrastructure/Configs/*"],
+
+      "@Exceptions/*": ["src/Application/Exceptions/*"],
+      "@UseCases/*": ["src/Application/UseCases/*"],
+      "@DTOs/*": ["src/Application/DTOs/*"],
     },
   },
 }

@@ -6,6 +6,7 @@ export const app = expres();
 const bootstrap = new Bootstrap(app);
 
 bootstrap.addRouting();
+bootstrap.addExceptions();
 
 app.listen(ApiConfig.PORT, () => {
   console.log(`Server is listening at http://localhost:${ApiConfig.PORT}`);
