@@ -30,7 +30,10 @@
     // Imports paths
     "baseUrl": ".",
     "paths": {
-      "@Repositories/*": ["src/Infrastructure/Repositories/*"],
+      "@Controllers/*": ["src/Presentation/Controllers/*"],
+      "@Middlewares/*": ["src/Presentation/Middlewares/*"],
+      "@Routers/*": ["src/Presentation/Routers/*"],
+
       "@Database/*": ["src/Infrastructure/Database/*"],
       "@Services/*": ["src/Infrastructure/Services/*"],
       "@Configs/*": ["src/Infrastructure/Configs/*"],
@@ -38,11 +41,6 @@
       "@Exceptions/*": ["src/Application/Exceptions/*"],
       "@UseCases/*": ["src/Application/UseCases/*"],
       "@DTOs/*": ["src/Application/DTOs/*"],
-      
-      "@Routers/*": ["src/Presentation/Routers/*"],
-
-      "@Models/*": ["src/Enterprise/Models/*"],
-      "@Specs/*": ["src/Enterprise/Specs/*"],
     },
   },
 }
