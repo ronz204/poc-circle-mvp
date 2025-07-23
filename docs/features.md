@@ -1,6 +1,6 @@
-### Circle Features
+### Circle | Features
 
-****
+---
 
 **FE-01:** Create and Join Circles.
 
@@ -8,7 +8,7 @@
 
 **Details:** Invitation to private circles will initially be made via a unique link or a code shared by the circle creator.
 
-****
+---
 
 **FE-02:** Goal Setting and Visualization.
 
@@ -16,7 +16,7 @@
 
 **Details:** Goals will initially be of type “yes/no” (completed/not completed) or a simple numeric value (e.g. “gain 5 kg”, “read 10 books”). Tracking complexity (e.g. goals with multiple milestones or subtasks) will be added in future iterations.
 
-****
+---
 
 **FE-03:** Progress Updates.
 
@@ -24,7 +24,7 @@
 
 **Details:** Registration will be done through a simple “post” entry. There will be no automatic tracking or integration with other applications at this time.
 
-****
+---
 
 **FE-04:** Comments and Reactions.
 
