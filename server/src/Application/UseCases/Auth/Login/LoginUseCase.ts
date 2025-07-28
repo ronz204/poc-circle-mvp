@@ -1,21 +1,21 @@
 import type { AuthDTO } from "@DTOs/AuthDTO";
 import type { UseCase } from "@UseCases/UseCase";
-import type { AuthLoginCommand } from "./AuthLoginCommand";
+import type { LoginCommand } from "./LoginCommand";
 
 import { inject, injectable } from "inversify";
 import { PrismaClient } from "generated/prisma";
 
-import { AuthLoginSchema } from "./AuthLoginSchema";
+import { LoginSchema } from "./LoginSchema";
 import { TokenService } from "@Services/Token/TokenService";
 import { LogicException } from "@Exceptions/LogicException";
 import { BcryptService } from "@Services/Bcrypt/BcryptService";
 
 @injectable()
-export class AuthLoginUseCase implements UseCase<AuthLoginCommand, AuthDTO> {
+export class LoginUseCase implements UseCase<LoginCommand, AuthDTO> {
   constructor(@inject(PrismaClient) private readonly prisma: PrismaClient) {};
   
-  public async execute(command: AuthLoginCommand): Promise<AuthDTO> {
-    const validated = await AuthLoginSchema.validate(command);
+  public async execute(command: LoginCommand): Promise<AuthDTO> {
+    const validated = await LoginSchema.validate(command);
 
     const existing = await this.prisma.user.findFirst({ where: { email: validated.email } });
     if (!existing) throw new LogicException.NotFound("User not found");
