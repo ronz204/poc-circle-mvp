@@ -8,14 +8,14 @@ import { TokenService } from "@Services/Token/TokenService";
 import { LogicException } from "@Exceptions/LogicException";
 import { BcryptService } from "@Services/Bcrypt/BcryptService";
 
-import { AuthLoginUseCaseFixture } from "./AuthLoginUseCaseFixture";
-import { AuthLoginUseCase } from "@UseCases/Auth/AuthLogin/AuthLoginUseCase";
+import { LoginUseCaseFixture } from "./LoginUseCaseFixture";
+import { LoginUseCase } from "@UseCases/Auth/Login/LoginUseCase";
 
-describe("auth login use case", () => {
+describe("login use case", () => {
   const prisma = Inversify.get(PrismaClient);
-  const useCase = Inversify.get(AuthLoginUseCase);
+  const useCase = Inversify.get(LoginUseCase);
 
-  const { user, command } = AuthLoginUseCaseFixture
+  const { user, command } = LoginUseCaseFixture
 
   it("should login a user with email and password", async () => {
     vi.spyOn(prisma.user, "findFirst").mockResolvedValue(user);

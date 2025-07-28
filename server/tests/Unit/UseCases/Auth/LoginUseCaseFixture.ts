@@ -2,7 +2,7 @@ import { UserFactory } from "@Database/Factories/UserFactory";
 
 const user = await UserFactory.build({});
 
-export const AuthLoginUseCaseFixture = {
+export const LoginUseCaseFixture = {
   user: user,
   command: {
     valid: {
