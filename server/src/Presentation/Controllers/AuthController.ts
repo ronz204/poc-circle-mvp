@@ -4,14 +4,14 @@ import type { Request, Response } from "express";
 import { LoginUseCase } from "@UseCases/Auth/Login/LoginUseCase";
 import type { LoginCommand } from "@UseCases/Auth/Login/LoginCommand";
 
-import { AuthRegisterUseCase } from "@UseCases/Auth/AuthRegister/AuthRegisterUseCase";
-import type { AuthRegisterCommand } from "@UseCases/Auth/AuthRegister/AuthRegisterCommand";
+import { RegisterUseCase } from "@UseCases/Auth/Register/RegisterUseCase";
+import type { RegisterCommand } from "@UseCases/Auth/Register/RegisterCommand";
 
 @injectable()
 export class AuthController {
   constructor(
     @inject(LoginUseCase) private readonly authLoginUseCase: LoginUseCase,
-    @inject(AuthRegisterUseCase) private readonly authRegisterUseCase: AuthRegisterUseCase
+    @inject(RegisterUseCase) private readonly authRegisterUseCase: RegisterUseCase,
   ) {
     this.login = this.login.bind(this);
     this.register = this.register.bind(this);
@@ -24,7 +24,7 @@ export class AuthController {
   };
 
   public async register(req: Request, res: Response): Promise<void> {
-    const command: AuthRegisterCommand = { ...req.body };
+    const command: RegisterCommand = { ...req.body };
     const response = await this.authRegisterUseCase.execute(command);
     res.status(201).json(response);
   };
