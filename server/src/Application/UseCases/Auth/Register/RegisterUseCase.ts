@@ -1,21 +1,21 @@
 import type { AuthDTO } from "@DTOs/AuthDTO";
 import type { UseCase } from "@UseCases/UseCase";
-import type { AuthRegisterCommand } from "./AuthRegisterCommand";
+import type { RegisterCommand } from "./RegisterCommand";
 
 import { inject, injectable } from "inversify";
 import { PrismaClient } from "generated/prisma";
 
-import { AuthRegisterSchema } from "./AuthRegisterSchema";
+import { RegisterSchema } from "./RegisterSchema";
 import { LogicException } from "@Exceptions/LogicException";
 import { TokenService } from "@Services/Token/TokenService";
 import { BcryptService } from "@Services/Bcrypt/BcryptService";
 
 @injectable()
-export class AuthRegisterUseCase implements UseCase<AuthRegisterCommand, AuthDTO> {
+export class RegisterUseCase implements UseCase<RegisterCommand, AuthDTO> {
   constructor(@inject(PrismaClient) private readonly prisma: PrismaClient) {};
 
-  public async execute(command: AuthRegisterCommand): Promise<AuthDTO> {
-    const validated = await AuthRegisterSchema.validate(command);
+  public async execute(command: RegisterCommand): Promise<AuthDTO> {
+    const validated = await RegisterSchema.validate(command);
 
     const existing = await this.prisma.user.findFirst({ where: { name: validated.name, email: validated.email } });
     if (existing) throw new LogicException.Redundancy("User already exists");
