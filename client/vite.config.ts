@@ -5,4 +5,10 @@ import tailwindcss from "@tailwindcss/vite";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [vue(), tailwindcss()],
+  resolve: {
+    alias: {
+      "@App": "/src/App",
+      "@Routes": "/src/Routes",
+    },
+  },
 });
