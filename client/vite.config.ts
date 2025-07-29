@@ -9,6 +9,7 @@ export default defineConfig({
     alias: {
       "@App": "/src/App",
       "@Routes": "/src/Routes",
+      "@Components": "/src/Components",
     },
   },
 });
