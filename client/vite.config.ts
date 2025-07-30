@@ -8,7 +8,9 @@ export default defineConfig({
   resolve: {
     alias: {
       "@App": "/src/App",
+      "@Assets": "/src/Assets",
       "@Routes": "/src/Routes",
+      "@Components": "/src/Components",
     },
   },
 });

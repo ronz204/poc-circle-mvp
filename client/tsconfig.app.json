@@ -14,7 +14,9 @@
     "baseUrl": ".",
     "paths": {
       "@App/*": ["src/App/*"],
+      "@Assets/*": ["src/Assets/*"],
       "@Routes/*": ["src/Routes/*"],
+      "@Components/*": ["src/Components/*"],
     },
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"]
