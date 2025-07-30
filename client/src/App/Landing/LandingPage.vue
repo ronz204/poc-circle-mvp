@@ -1,9 +1,11 @@
 <script lang="ts" setup>
-import LandingHeader from './Components/LandingHeader.vue';
+import Hero from './Components/Hero.vue';
+import Header from './Components/Header.vue';
 </script>
 
 <template>
   <div class="min-h-screen bg-[#09090b] text-white">
-    <LandingHeader />
+    <Header />
+    <Hero />
   </div>
 </template>
